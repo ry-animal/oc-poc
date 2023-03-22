@@ -75,7 +75,7 @@ const Home: NextPage = () => {
             <span className="text-[hsl(720,100%,70%)]">Blank</span> Categories
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-12 md:grid-cols-3 xl:grid-cols-6">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6">
           {PAGE_CONFIG.map((link) => {
             return (
               <Card key={link.title} title={link.title} href={link.path}>
