@@ -17,19 +17,19 @@ const Hamburger: React.FC = () => {
             className={`absolute block h-0.5 w-5 transform bg-current transition duration-500 ease-in-out ${
               open ? "rotate-45" : "-translate-y-1.5"
             }`}
-          ></span>
+          />
           <span
             aria-hidden="true"
             className={`absolute block h-0.5 w-5 transform bg-current transition duration-500 ease-in-out ${
               open ? "opacity-0" : ""
             }`}
-          ></span>
+          />
           <span
             aria-hidden="true"
             className={`absolute block h-0.5 w-5 transform bg-current transition duration-500 ease-in-out ${
               open ? "-rotate-45" : "translate-y-1.5"
             }`}
-          ></span>
+          />
         </div>
       </button>
     </nav>

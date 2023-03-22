@@ -1,13 +1,6 @@
 import Link from "next/link";
+import { PAGE_CONFIG } from "~/pages/constants";
 import Hamburger from "../Hamburger";
-
-const PAGE_LINKS = [
-  "Tokens",
-  "Marketplaces",
-  "Wallets",
-  "Projects",
-  "Analytics",
-];
 
 const Header: React.FC = () => {
   return (
@@ -19,13 +12,13 @@ const Header: React.FC = () => {
         <span className="text-[hsl(720,100%,70%)]">Blank</span> Connect
       </Link>
       <nav className="hidden items-center gap-4 md:flex">
-        {PAGE_LINKS.map((link) => (
+        {PAGE_CONFIG.map((link) => (
           <Link
             className="text-md font-medium tracking-tight text-white lg:text-xl xl:text-2xl"
-            key={link}
-            href={`/${link.toLowerCase()}`}
+            key={link.title}
+            href={`/${link.title.toLowerCase()}`}
           >
-            {link.toUpperCase()}
+            {link.title.toUpperCase()}
           </Link>
         ))}
       </nav>

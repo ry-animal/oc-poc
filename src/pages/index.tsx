@@ -1,9 +1,11 @@
 import { type NextPage } from "next";
 import Head from "next/head";
+import { ReactNode } from "react";
 import Card from "~/components/Card";
 import EmbeddedContent from "~/components/EmbeddedContent";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
+import { PAGE_CONFIG } from "./constants";
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +24,51 @@ const Home: NextPage = () => {
       <main className="flex min-h-screen flex-col items-center bg-gradient-to-b from-slate-200 to-slate-400">
         <Header />
         <div className="my-24 grid gap-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          <Card variant="large" title="Trending" />
-          <Card variant="large" title="Top Communities" />
-          <Card variant="large" title="New" />
+          <Card variant="large" title="Trending">
+            <li className="mt-4 flex flex-col text-white">
+              <ol>
+                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </ol>
+              <ol>
+                2. Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </ol>
+              <ol>
+                3. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip.
+              </ol>
+            </li>
+          </Card>
+          <Card variant="large" title="Top Communities">
+            <li className="mt-4 flex flex-col text-white">
+              <ol>
+                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </ol>
+              <ol>
+                2. Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </ol>
+              <ol>
+                3. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip.
+              </ol>
+            </li>
+          </Card>
+          <Card variant="large" title="New">
+            <li className="mt-4 flex flex-col text-white">
+              <ol>
+                1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </ol>
+              <ol>
+                2. Sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua.
+              </ol>
+              <ol>
+                3. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip.
+              </ol>
+            </li>
+          </Card>
         </div>
         <EmbeddedContent url="https://dune.com/embeds/96251/198502" />
         <div className="flex-start my-12 flex w-screen px-12 md:px-36">
@@ -33,12 +77,13 @@ const Home: NextPage = () => {
           </h2>
         </div>
         <div className="grid grid-cols-2 gap-12 md:grid-cols-3 xl:grid-cols-6">
-          <Card title="Collections" />
-          <Card title="Wallets" />
-          <Card title="Explorers" />
-          <Card title="Data" />
-          <Card title="Services" />
-          <Card title="Marketplaces" />
+          {PAGE_CONFIG.map((link) => {
+            return (
+              <Card key={link.title} title={link.title} href={link.path}>
+                <div className="mt-4">{link.logo}</div>
+              </Card>
+            );
+          })}
         </div>
         <Footer />
       </main>
