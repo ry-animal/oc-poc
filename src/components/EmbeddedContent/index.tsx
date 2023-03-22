@@ -28,7 +28,7 @@ const EmbeddedContent: React.FC<EmbeddedContentProps> = ({ url }) => {
     <iframe
       src={url}
       title="Embedded Content"
-      className="h-96 w-screen px-8 md:px-12"
+      className="h-96 w-screen px-2 sm:px-8 md:px-12"
     />
   );
 };
