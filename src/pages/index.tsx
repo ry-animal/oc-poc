@@ -1,6 +1,5 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import { ReactNode } from "react";
 import Card from "~/components/Card";
 import EmbeddedContent from "~/components/EmbeddedContent";
 import Footer from "~/components/Footer";
