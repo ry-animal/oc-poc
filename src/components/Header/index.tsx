@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PAGE_CONFIG } from "~/pages/constants";
+import { PAGE_CONFIG } from "~/constants";
 import Hamburger from "../Hamburger";
 
 const Header: React.FC = () => {

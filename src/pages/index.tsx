@@ -4,7 +4,7 @@ import Card from "~/components/Card";
 import EmbeddedContent from "~/components/EmbeddedContent";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
-import { PAGE_CONFIG } from "./constants";
+import { PAGE_CONFIG } from "../constants";
 
 const Home: NextPage = () => {
   return (
