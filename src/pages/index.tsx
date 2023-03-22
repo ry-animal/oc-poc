@@ -79,7 +79,7 @@ const Home: NextPage = () => {
           {PAGE_CONFIG.map((link) => {
             return (
               <Card key={link.title} title={link.title} href={link.path}>
-                <div className="mt-4">{link.logo}</div>
+                <div className="mt-10 sm:mt-4">{link.logo}</div>
               </Card>
             );
           })}
