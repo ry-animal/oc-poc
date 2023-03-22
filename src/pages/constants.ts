@@ -8,3 +8,5 @@ export const PAGE_CONFIG = [
   { title: "Services", logo: ICONS.inscript, path: "/services" },
   { title: "Marketplaces", logo: ICONS.marketplace, path: "/marketplaces" },
 ];
+
+export default PAGE_CONFIG;
