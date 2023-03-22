@@ -69,7 +69,7 @@ const Home: NextPage = () => {
             </li>
           </Card>
         </div>
-        <EmbeddedContent url="https://dune.com/embeds/96251/198502" />
+        <EmbeddedContent url="https://dune.com/embeds/2008613/3324931" />
         <div className="flex-start my-12 flex w-screen px-12 md:px-36">
           <h2 className="text-xl font-bold tracking-tight text-white lg:text-2xl xl:text-4xl">
             <span className="text-[hsl(720,100%,70%)]">Blank</span> Categories
